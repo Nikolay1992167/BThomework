@@ -1,6 +1,10 @@
+import ru.clevertec.TestReportPlugin
+
 plugins {
     id 'java'
 }
+
+apply plugin: TestReportPlugin
 
 group 'ru.clevertec'
 version '1.0-SNAPSHOT'
@@ -16,4 +20,5 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    finalizedBy 'report_test'
 }
