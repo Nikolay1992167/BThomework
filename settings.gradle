@@ -1,2 +1,3 @@
 rootProject.name = 'multimoduleproject'
+include 'utils'
 
