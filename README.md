@@ -1,4 +1,6 @@
 ## Multi module project
+* 1 step multimoduleproject/utils/tasks/build->build and /verification->test
+* 2 step multimoduleproject/application/api/tasks/build->build and /verification->test
 
 ### Module utils
 * Module created  'utils'
