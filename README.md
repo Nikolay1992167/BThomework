@@ -15,8 +15,8 @@
 * Module created 'application'
 * Modules created 'api' and 'core'
 * Configured files build.gradle. In the file build.gradle of module 'core' connected 
-  the library 'utils-1.3.5' using repository mavenLocal and dependency 'implementation 
-  'ru.clevertec:utils:1.3.5''. For correct operation in submodule 'api' in the file
+  the project 'utils' with dependency 'implementation project ('utils')'. For correct 
+  operation in submodule 'api' in the file
   build.gradle of module 'api' indicate dependency 
   implementation project(':application:core').
 * In submodule 'api' in the package 'ru.clevertec' class created 'Utils'.
