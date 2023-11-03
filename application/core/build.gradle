@@ -1,10 +1,7 @@
-import ru.clevertec.TestReportPlugin
-
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'jacoco'
 }
-
-apply plugin: TestReportPlugin
 
 group 'ru.clevertec'
 version '1.0-SNAPSHOT'
@@ -14,11 +11,14 @@ repositories {
 }
 
 dependencies {
+    implementation project(':utils')
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
 test {
     useJUnitPlatform()
-    finalizedBy 'report_test'
 }
+
+test.finalizedBy jacocoTestReport
+jacocoTestReport.dependsOn test

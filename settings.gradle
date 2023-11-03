@@ -1,2 +1,8 @@
 rootProject.name = 'multimoduleproject'
+include 'utils'
+include 'application'
+include 'application:core'
+findProject(':application:core')?.name = 'core'
+include 'application:api'
+findProject(':application:api')?.name = 'api'
 
